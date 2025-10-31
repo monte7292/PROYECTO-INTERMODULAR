@@ -2,7 +2,10 @@
 # Node / Angular
 # =========================
 # dependencias / builds
+gogaming/node_modules/
 node_modules/
+.idea/misc.xml
+gogaming/.idea/misc.xml
 # build output
 dist/
 dist-*/
@@ -23,6 +26,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.idea
 # environment files (contienen secretos)
 .env
 .env.*      # .env.local, .env.production, etc. ajusta según tus prácticas
