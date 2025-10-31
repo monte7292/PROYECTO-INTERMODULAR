@@ -1,0 +1,120 @@
+# =========================
+# Node / Angular
+# =========================
+# dependencias / builds
+node_modules/
+# build output
+dist/
+dist-*/
+out-tsc/
+# Angular/CLI cache
+.angular/
+.angular/cache/
+# temporary / caches
+tmp/
+temp/
+.sass-cache/
+.cache/
+# coverage
+coverage/
+coverage-*/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# environment files (contienen secretos)
+.env
+.env.*      # .env.local, .env.production, etc. ajusta según tus prácticas
+# lockfiles: generalmente se versionan; no se listan aquí por defecto
+# editor / OS
+.vscode/
+.idea/
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# =========================
+# Java / Spring Boot
+# =========================
+# build outputs
+/target/
+/build/
+/out/
+# Gradle caches and outputs
+.gradle/
+/**/build/
+# compiled classes, jars, wars
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+# logs
+*.log
+logs/
+hs_err_pid*
+*.pid
+# IDEs
+*.iml
+*.ipr
+*.iws
+/.project
+/.classpath
+/.settings/
+# IntelliJ
+.idea/
+# Eclipse specific
+.settings/
+# macOS
+.DS_Store
+
+# =========================
+# Secrets, keys, certs
+# =========================
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.crt
+
+# =========================
+# OS / Misc
+# =========================
+# swap, temp
+*.swp
+*~ 
+# local environment overrides
+local.properties
+# JetBrains caches
+.idea/
+*.log
+
+# =========================
+# Optional: archivos específicos de Spring Boot DevTools / runtimes
+# =========================
+# Cuando Spring Boot vuelve a compilar puede dejar archivos temporales:
+spring-boot-devtools/
+restart/                      # si se genera un directorio restart en tiempo de ejecución
+# Remote debug / pid files
+*.pring
+
+# =========================
+# Sugerencias para monorepos (si frontend/ backend/ separados)
+# =========================
+# Si tienes estructura /frontend y /backend puedes añadir:
+# frontend/node_modules/
+# frontend/dist/
+# backend/target/
+# backend/build/
+# y/o simplemente mantener este .gitignore en la raíz (los patrones anteriores
+# aplicarán igualmente: p.ej. frontend/node_modules/ será ignorado por node_modules/)
+
+# =========================
+# Notas
+# =========================
+# - No ignoré archivos como package-lock.json o yarn.lock a propósito (es recomendable versionarlos)
+# - Tampoco se ignora mvnw ni la carpeta .mvn (el wrapper de Maven suele versionarse)
+# - Ajusta según tus archivos de configuración (p. ej. application-local.properties)
+#   si no quieres que se suban, añade pattern: **/application-*.properties
