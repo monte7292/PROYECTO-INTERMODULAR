@@ -1,0 +1,8 @@
+- Crear la rama.
+- Haces el commit desde la Rama
+- Haces el push a la rama ( Seleccionas la rama solamente, **NO LA MAIN**)
+- Te cambias a la rama Main
+- Haces el pull desde la rama main
+- Haces el merge de la rama a la rama main ( La rama actual )
+- Haces el push desde el main
+- Y por ultimo borras la rama, así con cada cambio nuevo que vayas a hacer
