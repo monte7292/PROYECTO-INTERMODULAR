@@ -1,6 +1,6 @@
 <header class="sticky top-0 z-50">
   <!-- Top navbar -->
-  <div class="bg-gray-900 text-white">
+  <div class="bg-[#111111] text-white">
     <div class="max-w-6xl mx-auto px-4 py-3 md:h-[6rem] flex flex-col items-center gap-3 md:flex-row md:justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-3 order-1 md:order-none">
@@ -26,7 +26,7 @@
             </button>
           </div>
           <!-- Categorías button (3 lines, red bg) visible solo en móvil -->
-          <button type="button" (click)="toggleMenu()" aria-expanded="{{menuOpen()}}" class="shrink-0 h-10 px-4 rounded-full bg-red-600 text-white hover:bg-red-700 flex items-center gap-2 md:hidden">
+          <button type="button" (click)="toggleMenu()" aria-expanded="{{menuOpen()}}" class="shrink-0 h-10 px-4 rounded-full bg-[#CC0000] text-white hover:bg-[#CC0000]-700 flex items-center gap-2 md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-5 h-5">
               <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
@@ -58,7 +58,7 @@
   </div>
 
   <!-- Category bar -->
-  <nav class="bg-red-600 text-white">
+  <nav class="bg-[#CC0000] text-white">
     <div class="max-w-6xl mx-auto px-4">
       <!-- Desktop categories centered -->
       <ul class="hidden md:flex items-center justify-center gap-8 h-10 text-sm font-semibold">

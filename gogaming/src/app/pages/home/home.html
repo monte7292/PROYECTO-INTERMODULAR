@@ -1,31 +1,36 @@
 <!-- Hero principal: imagen + textos + botón -->
 <section class="mx-auto w-[90%] md:w-[75%] pt-4">
-  <div class="relative overflow-hidden rounded-xl">
-    <!-- Imagen de fondo -->
-    <img
-      src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1600&auto=format&fit=crop"
-      alt="Oferta destacada"
-      class="w-full h-[260px] md:h-[360px] object-cover"
-    />
+    <div class="relative overflow-hidden rounded-xl">
+        <!-- Imagen de fondo -->
+        <img
+                src="https://i.ibb.co/cKGjpVQX/Captura-de-pantalla-2025-10-24-200539.png"
+                alt="Oferta destacada"
+                class="w-full h-[260px] md:h-[250px] object-cover"
+        />
 
-    <!-- Overlay para mejorar legibilidad -->
-    <div class="absolute inset-0 bg-black/35"></div>
+        <!-- Overlay para mejorar legibilidad -->
+        <div class="absolute inset-0 bg-black/35"></div>
 
-    <!-- Contenido del hero -->
-    <div class="absolute inset-0 flex items-center">
-      <div class="px-6 md:px-10 text-white">
-        <h2 class="text-3xl md:text-5xl font-bold">¡Ofertas!</h2>
-        <p class="mt-3 text-base md:text-lg max-w-xl">
-          Precios de escándalo por tiempo limitado
-        </p>
-        <a
-          href="#"
-          class="inline-block mt-5 bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full"
-          aria-label="Comprar ahora"
-        >
-          Comprar Ya
-        </a>
-      </div>
+        <!-- Contenido del hero (alineado a la derecha, texto alineado a la izquierda) -->
+        <div class="absolute inset-0 flex items-center justify-end">
+            <div class="px-6 md:px-10 text-white text-left max-w-xl mr-10 md:mr-20">
+                <h2 class="text-3xl md:text-5xl font-bold">¡Ofertas!</h2>
+
+                <!-- Texto en dos líneas -->
+                <p class="mt-3 text-xl md:text-2xl font-semibold leading-tight">
+                    Precios de escándalo<br />
+                    por tiempo limitado
+                </p>
+
+                <!-- Botón más ancho y centrado -->
+                <a
+                        href="#"
+                        class="inline-flex mt-5 bg-[#CC0000] hover:bg-[#990000] text-white font-semibold text-sm md:text-base px-6 py-3 rounded-lg items-center justify-center min-w-[160px] md:min-w-[200px]"
+                        aria-label="Comprar ahora"
+                >
+                    Comprar Ya
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
