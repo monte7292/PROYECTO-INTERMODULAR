@@ -5,6 +5,7 @@
 gogaming/node_modules/
 node_modules/
 .idea/misc.xml
+/idea
 gogaming/.idea/misc.xml
 # build output
 dist/
