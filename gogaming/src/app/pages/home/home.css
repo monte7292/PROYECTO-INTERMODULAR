@@ -6,3 +6,13 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;            /* Chrome, Safari */
 }
+@keyframes slideLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-30px); opacity: 0.85; }
+}
+@keyframes slideRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(30px); opacity: 0.85; }
+}
+.slide-left { animation: slideLeft 250ms ease; }
+.slide-right { animation: slideRight 250ms ease; }
