@@ -1,0 +1,42 @@
+<section class="mx-auto w-[92%] md:w-[78%] py-6 cesta">
+  <div class="mb-4">
+    <h1 class="title">Tu cesta</h1>
+    <p class="subtitle">Revise sus artículos, cantidades y total antes de finalizar la compra.</p>
+  </div>
+
+  <div *ngIf="cart.items().length === 0" class="empty">Tu cesta está vacía.</div>
+
+  <div *ngIf="cart.items().length > 0" class="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6">
+    <div class="space-y-4">
+      <article *ngFor="let item of cart.items()" class="cart-item">
+        <div class="thumb">
+          <img [src]="item.image ? item.image : '/raton.png'" alt="{{ item.nombre }}">
+        </div>
+        <div class="info">
+          <div class="brand">{{ item.marca }}</div>
+          <div class="name">{{ item.nombre }}</div>
+          <div class="price">{{ item.precio }} €</div>
+        </div>
+        <div class="qty">
+          <button (click)="dec(item.id)" aria-label="Restar">−</button>
+          <input type="number" min="1" [value]="item.qty" (input)="cart.updateQty(item.id, $any($event.target).value)" />
+          <button (click)="inc(item.id)" aria-label="Sumar">+</button>
+        </div>
+        <button (click)="remove(item.id)" class="remove" aria-label="Eliminar">✕</button>
+      </article>
+    </div>
+
+    <aside class="summary">
+      <div class="row">
+        <span>Artículos</span>
+        <span>{{ cart.count() }}</span>
+      </div>
+      <div class="row total">
+        <span>Total</span>
+        <span>{{ cart.total() }} €</span>
+      </div>
+      <button (click)="comprar()" class="buy">Comprar</button>
+      <div class="note">Envío y impuestos calculados al pagar.</div>
+    </aside>
+  </div>
+</section>

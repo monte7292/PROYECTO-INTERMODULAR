@@ -57,7 +57,7 @@
       </div>
       <div class="mt-3 flex items-center justify-between">
         <span class="text-gray-900 font-bold text-2xl">{{ raton.precio }} €</span>
-        <button aria-label="Añadir al carrito" class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">+</button>
+        <button aria-label="Añadir al carrito" (click)="goToProduct(raton.id)" class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">+</button>
       </div>
     </article>
   </div>

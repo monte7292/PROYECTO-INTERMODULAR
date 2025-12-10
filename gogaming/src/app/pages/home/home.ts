@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +18,7 @@ export class Home {
   lastDirection: 'left' | 'right' = 'right';
 
   /* OBTENER RATONES CON APIS */
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router, private cart: CartService) {}
   ngOnInit() {
     this.http.get<Array<{ id?: number; nombre: string; marca: string; precio: number; image?: string }>>('http://localhost:8080/api/productos/tipo/Raton')
       .subscribe({
@@ -32,6 +34,7 @@ export class Home {
     const delta = Math.round(el.clientWidth * 0.9) * (direction === 'left' ? -1 : 1);
     el.scrollBy({ left: delta, behavior: 'smooth' });
   }
+
   trackById(index: number, item: { id?: number }) { return item.id ?? index }
   get visibleRatones() {
     if (!this.ratones || this.ratones.length <= 4) return this.ratones;
@@ -60,5 +63,13 @@ export class Home {
         this.animating = false;
       }, 250);
     }
+  }
+
+  goToProduct(id?: number) {
+    if (id != null) this.router.navigate(['/product', id])
+  }
+
+  addToCart(r: { id?: number; nombre: string; marca: string; precio: number; image?: string }) {
+    this.cart.add(r, 1)
   }
 }

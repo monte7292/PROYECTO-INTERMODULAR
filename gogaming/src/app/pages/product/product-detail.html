@@ -1,0 +1,37 @@
+<section class="mx-auto w-[90%] md:w-[75%] py-8 relative">
+  <div *ngIf="showToast()" class="toast toast-center">Producto añadido a la cesta</div>
+  <div *ngIf="producto" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Imagen del producto -->
+    <div class="bg-white rounded-xl shadow p-6 flex items-center justify-center">
+      <img [src]="producto.image ? producto.image : '/raton.png'" alt="{{ producto.nombre }}" class="object-contain" />
+    </div>
+
+    <!-- Detalles -->
+    <div>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900">{{ producto.nombre }}</h1>
+      <p class="text-gray-600 mt-1">Marca: <span class="font-semibold">{{ producto.marca }}</span></p>
+
+      <div class="mt-5 flex items-center gap-4">
+        <span class="text-3xl font-extrabold text-gray-900">{{ producto.precio }} €</span>
+        <span class="text-sm text-gray-500">IVA incl.</span>
+      </div>
+
+      <!-- Descripción placeholder -->
+      <p class="mt-4 text-gray-700">Diseñado para rendimiento gaming, materiales ligeros y sensor de alta precisión. Ideal para sesiones prolongadas.</p>
+
+      <!-- Pedido -->
+      <div class="mt-6 flex items-center gap-3">
+        <label for="qty" class="text-sm font-semibold text-gray-700">Cantidad</label>
+        <input id="qty" type="number" min="1" [value]="cantidad" (input)="cantidad = $any($event.target).value" class="w-20 rounded-lg border border-gray-300 px-3 py-2" />
+        <button (click)="comprar()" class="bg-[#CC0000] hover:bg-[#990000] text-white font-semibold px-5 py-2 rounded-lg">Añadir al carrito</button>
+      </div>
+
+      <!-- Info adicional -->
+      <ul class="mt-6 text-sm text-gray-600 space-y-2">
+        <li>Entrega en 24/48h</li>
+        <li>Garantía oficial</li>
+        <li>Devoluciones 14 días</li>
+      </ul>
+    </div>
+  </div>
+</section>
