@@ -46,7 +46,7 @@
       </svg>
     </button>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-5" [class.slide-left]="animating && lastDirection==='right'" [class.slide-right]="animating && lastDirection==='left'">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-5 mobile-carousel" [class.slide-left]="animating && lastDirection==='right'" [class.slide-right]="animating && lastDirection==='left'">
       <article *ngFor="let raton of visibleRatones; trackBy: trackById" class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col">
       <div class="h-30 flex items-center justify-center">
         <img [src]="raton.image ? raton.image : '/raton.png'" alt="{{ raton.marca }}" class="w-50 h-50 object-contain">

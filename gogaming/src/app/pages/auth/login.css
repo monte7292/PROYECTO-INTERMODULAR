@@ -1,0 +1,11 @@
+.auth { min-height: 60vh; display: grid; place-items: center; }
+.form-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.08); padding: 24px; width: 100%; max-width: 420px; }
+.form-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+.input { width: 100%; border: 1px solid #d1d5db; border-radius: 8px; padding: 10px 12px; }
+.btn-primary { width: 100%; background: #CC0000; color: #fff; font-weight: 700; border-radius: 10px; padding: 10px 14px; }
+.btn-primary:disabled { opacity: 0.5; }
+.switch { text-align: center; color: #6b7280; margin: 4px 0; }
+.switch-link { display: block; text-align: center; color: #374151; text-decoration: underline; font-weight: 600; }
+.btn-secondary { display: block; text-align: center; width: 100%; border: 1px solid #d1d5db; border-radius: 10px; padding: 10px 14px; color: #111827; }
+.eye { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+.toast { position: fixed; left: 50%; top: 20%; transform: translateX(-50%); background: #16a34a; color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; z-index: 60; }

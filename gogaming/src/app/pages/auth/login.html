@@ -1,0 +1,14 @@
+<section class="auth mx-auto w-[92%] md:w-[78%] py-8">
+  <form class="form-card space-y-4" (ngSubmit)="submit()" #f="ngForm">
+    <h1 class="form-title">Iniciar sesión</h1>
+    <input [(ngModel)]="email" name="email" type="email" placeholder="E-mail" class="input" required />
+    <div class="relative">
+      <input [(ngModel)]="password" name="password" [type]="showPass ? 'text' : 'password'" placeholder="Contraseña" class="input pr-10" required />
+      <button type="button" class="eye" (click)="showPass = !showPass">👁</button>
+    </div>
+    <button type="submit" class="btn-primary" [disabled]="!email || !password">Iniciar sesión</button>
+    <a class="switch-link" routerLink="/register">¿No tienes cuenta?</a>
+    <a class="btn-secondary" routerLink="/register">Crear cuenta</a>
+  </form>
+  <div *ngIf="toast" class="toast">Sesión iniciada</div>
+</section>

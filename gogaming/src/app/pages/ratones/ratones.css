@@ -3,11 +3,17 @@
 .filters { position: fixed; left: 0; top: 136px; bottom: 0; width: 260px; background: #111111; color: #fff; padding: 20px; overflow-y: auto; z-index: 30; }
 .filter-title { font-size: 0.875rem; font-weight: 600; margin-bottom: 8px; color: #ffffff; }
 .filter-group { border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; }
-.filter-option { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: #e5e7eb; }
-.filter-option input { width: 16px; height: 16px; accent-color: #CC0000; }
+.filter-option { position: relative; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: #e5e7eb; padding: 8px 12px 8px 36px; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.02); transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease; }
+.filter-option input { position: absolute; opacity: 0; pointer-events: none; }
 .label-text { transition: color 150ms ease; }
-.filter-option:hover { color: #ffffff; }
+.filter-option:hover { color: #ffffff; background-color: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
 .filter-option input:checked + .label-text { color: #CC0000; }
+label.filter-option:has(input:checked) { background-color: rgba(204,0,0,0.15); border-color: #CC0000; color: #ffffff; }
+label.filter-option:has(input:checked) .label-text { font-weight: 600; }
+label.filter-option::before { content: ""; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.25); background: transparent; }
+label.filter-option:has(input:checked)::before { background: #CC0000; border-color: #CC0000; }
+label.filter-option:has(input:checked)::after { content: ""; position: absolute; left: 17px; top: 50%; transform: translateY(-50%) rotate(45deg); width: 4px; height: 8px; border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; }
+label.filter-option:has(input:focus-visible) { outline: 2px solid #CC0000; outline-offset: 2px; }
 .card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
 .card:hover { border-color: #d1d5db; }
 .image-box { position: relative; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1; background: #ffffff; }
@@ -21,3 +27,7 @@
 .btn-primary:hover { background: #990000; }
 .load-more { padding: 10px 16px; border-radius: 9999px; background: #CC0000; color: #fff; font-weight: 600; }
 .load-more:disabled { opacity: 0.5; }
+
+label.filter-option:has(input:checked) { background-color: rgba(255,255,255,0.12); color: #ffffff; }
+label.filter-option:has(input:checked) .label-text { font-weight: 600; }
+.filter-option input:focus-visible { outline: 2px solid #CC0000; outline-offset: 2px; }

@@ -1,7 +1,7 @@
 .title { font-size: 1.5rem; font-weight: 800; }
 .subtitle { color: #6b7280; margin-top: 4px; }
 .empty { color: #6b7280; }
-.cart-item { display: grid; grid-template-columns: 80px 1fr auto auto; gap: 12px; align-items: center; background: #f3f4f6; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 12px; }
+.cart-item { display: grid; grid-template-columns: 80px 1fr auto auto; gap: 12px; align-items: center; background: #f3f4f6; border-radius: 16px; padding: 12px; }
 .thumb img { width: 64px; height: 64px; object-fit: contain; }
 .brand { color: #111827; font-weight: 700; }
 .name { color: #4b5563; font-size: 0.95rem; }

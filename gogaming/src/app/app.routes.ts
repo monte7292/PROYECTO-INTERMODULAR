@@ -4,6 +4,8 @@ import {About} from "./pages/about/about";
 import { ProductDetail } from './pages/product/product-detail';
 import { RatonesPage } from './pages/ratones/ratones';
 import { CestaPage } from './pages/cesta/cesta';
+import { LoginPage } from './pages/auth/login';
+import { RegisterPage } from './pages/auth/register';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -11,4 +13,6 @@ export const routes: Routes = [
     { path: 'product/:id', component: ProductDetail },
     { path: 'ratones', component: RatonesPage },
     { path: 'cesta', component: CestaPage },
+    { path: 'login', component: LoginPage },
+    { path: 'register', component: RegisterPage },
 ]

@@ -1,0 +1,28 @@
+<section class="auth mx-auto w-[92%] md:w-[78%] py-8">
+  <form class="form-card space-y-4" (ngSubmit)="submit()" #f="ngForm">
+    <h1 class="form-title">Crear cuenta</h1>
+    <input [(ngModel)]="nombre" name="nombre" type="text" placeholder="Nombre" class="input" required />
+    <input [(ngModel)]="email" name="email" type="email" placeholder="E-mail*" class="input" required />
+    <div class="relative">
+      <input [(ngModel)]="password" name="password" [type]="showPass ? 'text' : 'password'" placeholder="Contraseña*" class="input pr-10" required />
+      <button type="button" class="eye" (click)="showPass = !showPass">👁</button>
+    </div>
+    <div class="relative">
+      <input [(ngModel)]="confirm" name="confirm" [type]="showConfirm ? 'text' : 'password'" placeholder="Repetir contraseña*" class="input pr-10" required />
+      <button type="button" class="eye" (click)="showConfirm = !showConfirm">👁</button>
+    </div>
+    <label class="checkbox">
+      <input [(ngModel)]="accept" name="accept" type="checkbox" />
+      <span>He leído y acepto la política de privacidad</span>
+    </label>
+    <label class="checkbox">
+      <input [(ngModel)]="marketing" name="marketing" type="checkbox" />
+      <span>Recibir descuentos exclusivos por e-mail</span>
+    </label>
+    <button type="submit" class="btn-primary">Crear cuenta</button>
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <a class="switch-link" routerLink="/login">Ya tengo una cuenta</a>
+    <a class="btn-secondary" routerLink="/login">Iniciar sesión</a>
+  </form>
+  <div *ngIf="toast" class="toast">Cuenta creada</div>
+</section>
