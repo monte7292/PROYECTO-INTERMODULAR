@@ -1,4 +1,9 @@
-.auth { min-height: 60vh; display: grid; place-items: center; }
+.auth { 
+    min-height: 60vh; 
+    display: grid; 
+    place-items: center; 
+}
+
 .form-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.08); padding: 24px; width: 100%; max-width: 420px; }
 .form-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
 .input { width: 100%; border: 1px solid #d1d5db; border-radius: 8px; padding: 10px 12px; }
